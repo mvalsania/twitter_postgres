@@ -156,7 +156,7 @@ def insert_tweet(connection,tweet):
         res = connection.execute(sql,{
             'id_users':tweet['user']['id'],
             'created_at':remove_nulls(tweet['created_at']),
-            'updated_at': remove_nulls(tweet['user'].get('updated_at'))
+            'updated_at': remove_nulls(tweet['user'].get('updated_at')),
             'id_urls':user_id_urls,
             'friends_count':tweet['user']['friends_count'],
             'listed_count':tweet['user']['listed_count'],
